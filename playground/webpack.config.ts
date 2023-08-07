@@ -1,5 +1,5 @@
 import path from "node:path";
-import webpack from "webpack";
+import type * as webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import WasmPackPlugin from "@wasm-tool/wasm-pack-plugin";

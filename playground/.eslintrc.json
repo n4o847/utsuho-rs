@@ -1,0 +1,16 @@
+{
+  "extends": "@n4o847",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "./playground/tsconfig.json"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "import/default": "off",
+    "import/no-named-as-default-member": "off"
+  }
+}

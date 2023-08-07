@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useCallback, useState } from "react";
+import React, { type ChangeEvent, useCallback, useState } from "react";
 import * as utsuho from "utsuho";
 
 export const App: React.FC = () => {
