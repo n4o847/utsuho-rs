@@ -1,8 +1,6 @@
 {
-  "extends": "@tsconfig/recommended",
+  "extends": "@tsconfig/create-react-app",
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
     "paths": {
       "utsuho": ["../pkg"]
     }

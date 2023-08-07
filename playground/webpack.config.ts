@@ -5,12 +5,17 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import WasmPackPlugin from "@wasm-tool/wasm-pack-plugin";
 
 const config: webpack.Configuration = {
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader",
+        options: {
+          compilerOptions: {
+            noEmit: false,
+          },
+        },
       },
       {
         test: /\.css$/,
@@ -19,6 +24,7 @@ const config: webpack.Configuration = {
     ],
   },
   resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
     alias: {
       utsuho: path.resolve(__dirname, "../pkg"),
     },
