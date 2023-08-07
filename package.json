@@ -1,0 +1,9 @@
+{
+  "name": "utsuho",
+  "scripts": {
+    "dev": "npm run dev -w playground"
+  },
+  "workspaces": [
+    "playground"
+  ]
+}

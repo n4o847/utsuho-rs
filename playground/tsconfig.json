@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/recommended",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "utsuho": ["../pkg"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "Node16"
+    }
+  }
+}
