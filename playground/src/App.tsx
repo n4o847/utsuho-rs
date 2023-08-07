@@ -1,17 +1,26 @@
-import React, { useCallback, useState } from "react";
+import React, { ChangeEvent, useCallback, useState } from "react";
 import * as utsuho from "utsuho";
 
 export const App: React.FC = () => {
-  const [text, setText] = useState("hello");
+  const [code, setCode] = useState("");
+  const [program, setProgram] = useState("");
+
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLTextAreaElement>) => {
+      setCode(event.currentTarget.value);
+    },
+    []
+  );
 
   const handleClick = useCallback(() => {
-    setText(`add(2, 3) = ${utsuho.add(2, 3)}`);
-  }, []);
+    setProgram(utsuho.parse(code));
+  }, [code]);
 
   return (
     <>
-      <button onClick={handleClick}>Button</button>
-      <pre>{text}</pre>
+      <textarea value={code} onChange={handleChange} />
+      <button onClick={handleClick}>Parse</button>
+      <pre style={{ whiteSpace: "pre-wrap" }}>{program}</pre>
     </>
   );
 };

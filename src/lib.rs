@@ -1,6 +1,6 @@
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub fn parse(code: String) -> String {
+    format!("{:?}", whitespacers::Program::parse(code.into_bytes()))
 }
